@@ -1,0 +1,123 @@
+@charset "windows-1251";
+/*фон*/
+body {
+   background-color: #9de6fc
+}
+
+/*оформление меню*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 0px 0 5px;
+  padding: 28px 0 5px;
+  text-align: center;
+  background: linear-gradient(to top, #adcce9, #4c7397);
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #003878;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 8px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 19px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .4s;
+}
+.menu-main a, .menu-main a:visited {color: #000333;}
+.menu-main a.current, .menu-main a:hover{color: #1e2594;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #5056fa;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px;
+  margin: 0 30px;
+}
+}
+
+/*параллах эффект*/
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+contacts {
+  color: #3a007a;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-weight: normal;
+}
+
+contacts_text {
+  color: #160033;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-weight: normal;
+}
+
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+p {
+    text-indent: 20px;
+}
+
+glow-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 20px;
+  margin: 10px 10px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 40px 40px #ac80dc inset, 0 0 0 0 #9f60c5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: white;
+  transition: .15s ease-in-out;
+}
+glow-button:hover {
+  box-shadow: 0 0 10px 0 #7914f5 inset, 0 0 10px 4px #8f1fd7;
+  color: #ab67dc;
+}

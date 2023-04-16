@@ -1,0 +1,24 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href={% static 'img/favicon.ico' %} type="image/x-icon">
+</head>
+<body>
+    <ul class="menu-main">
+      <li><a href="/index">Главная</a></li>
+      <li><a href="/animation">Animation</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+      <li><a href="/login" class="current">Вход</a></li>
+    </ul>
+
+    <contacts><h1>Если вы зарегестрированный пользователь, введите данные и нажмите войти</h1></contacts>
+
+    <glow-button><a href="/checkin"> Войти </a></glow-button><br>
+    <contacts><h1>Если вы хотите создать новый аккаунт, то введите данные и нажмите создать пользователя</h1></contacts>
+
+    <glow-button><a href="/login"> Создать пользователя </a></glow-button>
+</body>
+</html>
