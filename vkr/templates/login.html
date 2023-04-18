@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>Вход</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="shortcut icon" href={% static 'img/favicon.ico' %} type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
     <ul class="menu-main">
-      <li><a href="/index">Главная</a></li>
-      <li><a href="/animation">Animation</a></li>
+      <li><a href="/">Главная</a></li>
+      <li><a href="/animation">Blog</a></li>
+      <li><a href="/anime">Анимация</a></li>
       <li><a href="/contacts">Контакты</a></li>
-      <li><a href="/login" class="current">Вход</a></li>
+      <li><a href="/account/login" class="current">Вход</a></li>
     </ul>
 
-    <contacts><h1>Если вы зарегестрированный пользователь, введите данные и нажмите войти</h1></contacts>
-
-    <glow-button><a href="/checkin"> Войти </a></glow-button><br>
-    <contacts><h1>Если вы хотите создать новый аккаунт, то введите данные и нажмите создать пользователя</h1></contacts>
-
-    <glow-button><a href="/login"> Создать пользователя </a></glow-button>
+    <contacts_text>
+        {% block title %}{% endblock %}
+        <center>{% block content %}
+        <h1>LOGIN</h1>
+        <p>Пожалуйста, введите данные для входа</p>
+        <form action="." method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <section class="closing-button"><input type="submit" value="Вход"></section>
+        </form>{% endblock %}</center>
+    </contacts_text>
 </body>
 </html>

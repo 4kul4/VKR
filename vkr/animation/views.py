@@ -1,14 +1,27 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Post
+# from django.shortcuts import render, get_object_or_404
+# from .models import Post
+#
+# def post_list(request):
+#     posts = Post.published.all()
+#     return render(request, 'list.html', {'posts': posts})
+#
+# def post_detail(request, year, month, day, post):
+#     post = get_object_or_404(Post, slug=post,
+#                                    status='published',
+#                                    publish__year=year,
+#                                    publish__month=month,
+#                                    publish__day=day)
+#     return render(request,'detail.html', {'post': post})
 
-def post_list(request):
-    posts = Post.published.all()
-    return render(request, 'list.html', {'posts': posts})
 
-def post_detail(request, year, month, day, post):
-    post = get_object_or_404(Post, slug=post,
-                                   status='published',
-                                   publish__year=year,
-                                   publish__month=month,
-                                   publish__day=day)
-    return render(request,'detail.html', {'post': post})
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+
+def index(request):
+    return render(request, 'index.html')
+
+def animation(request):
+    return render(request, 'animation.html')
+
+def status(request):
+    return HttpResponse("OK")

@@ -1,0 +1,20 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анимация</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <ul class="menu-main">
+      <li><a href="/">Главная</a></li>
+      <li><a href="/animation">Blog</a></li>
+      <li><a href="/anime" class="current">Анимация</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+      <li><a href="/account/login">Вход</a></li>
+    </ul>
+    <div data-site3d="1557"></div><script id="site3d-configurator-load" src="https://site3d.site/configurator/load.js" data-lang="ru"></script>
+    <img src="{% static 'img/ball.gif' %} " id="hill1">
+</body>
+</html>
