@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('vkr.web.urls')),
     path('animation/', include('animation.urls')),
+    path('account/', include('account.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

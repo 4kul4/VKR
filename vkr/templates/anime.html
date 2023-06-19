@@ -1,0 +1,62 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анимация</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+<body>
+    <ul class="menu-main">
+      <li><a href="/">Главная</a></li>
+      <li><a href="/anime" class="current">Анимация</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+      <li><a href="/account/login">Вход</a></li>
+    </ul>
+
+    <!-- 3D objsect -->
+    <!-- This inserts the 3D object inside the aside container -->
+    <div id="id1"><model-viewer src="{% static 'router/Blender.gltf' %}" alt="Router" auto-rotate camera-controls ar ios-src="{% static 'router/Blender.gltf' %}">
+    </model-viewer></div>
+    <div id="id2"><h>Что такое 3D-моделирование?</h><br><br>
+        3D-моделирование — раздел компьютерной графики, посвященный созданию трёхмерных визуальных объектов при помощи профильного ПО.<br>
+        3D-моделирование позволяет наглядно представить объект, существующий только в чертежах, например копию будущего здания или
+        инопланетного пейзажа. Использование такой технологии можно встретить где угодно: в кинематографе; видеоиграх; анимации; VR; рекламе; медицине; архитектуре; машиностроении и т.д.</div>
+
+    <div id="id3"><model-viewer src="{% static 'vr/HTC_Vive_Headset.gltf' %}" alt="VR Headset" auto-rotate camera-controls ar ios-src="{% static 'vr/HTC_Vive_Headset.gltf' %}">
+    </model-viewer></div>
+    <div id="id4"><h>Что нужно, чтобы начать?</h><br><br>
+        Главное — искренний интерес и вдохновлённость затеей.<br>
+        Самым первым шагом может быть даже скачивание приложения по 3D-моделированию на смартфон — просто чтобы понять,
+        нравится ли вам создавать объемные фигурки на устройстве. На Android можно установить 3D Designer,
+        а на iOS пойдёт и более серьёзное САПР-приложение — Shapr: 3D modeling CAD.</div>
+
+
+    <div id="id1"><model-viewer src="{% static 'car/VW_Touran_2007.gltf' %}" alt="car" auto-rotate camera-controls ar ios-src="{% static 'car/VW_Touran_2007.gltf' %}">
+    </model-viewer></div>
+    <div id="id2"><h>Знания и навыки</h><br><br>
+        Для старта в полигональном моделировании не нужны никакие специфические знания, помимо умения пользоваться компьютером. Полезным, но не
+        обязательным навыком для этапа скульптинга (способа моделирования, когда персонаж лепится как из глины) будет умение рисовать от руки.<br>
+        Для начала продуктивной работы в САПРах большим плюсом будет понимание топологии поверхностей, свойств материалов и технологии производства.
+        Поэтому профильное образование и конструкторские навыки будут очень кстати.</div>
+
+
+    <div id="id3"><model-viewer src="{% static 'pc/pc.gltf' %}" alt="pc" auto-rotate camera-controls ar ios-src="{% static 'pc/pc.gltf' %}">
+    </model-viewer></div>
+    <div id="id4"><h>Какой компьютер подойдет для 3D-моделирования?</h><br><br>
+        Минимальные характеристики для 3D-моделирования без сильных тормозов с учётом требования большинства программ такие:<br>
+        Full HD экран 1920х1080.<br>
+        Процессор — 4 ядра от 3 GHz.<br>
+        Оперативная память — 8 Гб.<br>
+        Видеокарта — с поддержкой OpenGL 4.3 на 4 Гб памяти.<br>
+        Свободное место на диске — 50 Гб.</div>
+
+
+
+    <!--<div data-site3d="1557"></div><script id="site3d-configurator-load" src="https://site3d.site/configurator/load.js" data-lang="ru"></script>
+    </section>
+    <img src="{% static 'img/ball.gif' %}" height="600px">-->
+</body>
+</html>

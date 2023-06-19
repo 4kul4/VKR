@@ -4,7 +4,8 @@ from vkr.web import views
 
 urlpatterns = [
     path('contacts', views.contacts),
-    path('index', views.index),
-    path('animation', views.animation),
+    path('', views.index),
     path('login', views.login),
+    path('anime', views.anime),
+    path('animation', views.animation),
 ]
